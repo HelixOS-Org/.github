@@ -3,104 +3,35 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HelixOS-Org/helix/main/assets/logo-banner.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HelixOS-Org/helix/main/assets/logo-banner.svg">
-  <img alt="Helix OS" src="https://raw.githubusercontent.com/HelixOS-Org/helix/main/assets/logo-banner.svg" width="560">
+  <img alt="HelixOS" src="https://raw.githubusercontent.com/HelixOS-Org/helix/main/assets/logo-banner.svg" width="560">
 </picture>
 
 <br/>
-
-**Rethinking the kernel — one trait at a time.**
-
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](https://github.com/HelixOS-Org/helix/blob/main/LICENSE)
-[![Rust: nightly](https://img.shields.io/badge/rust-nightly-orange?style=flat-square&logo=rust)](https://github.com/HelixOS-Org/helix/blob/main/rust-toolchain.toml)
-[![Target: x86_64](https://img.shields.io/badge/target-x86__64--unknown--none-green?style=flat-square)](https://github.com/HelixOS-Org/helix)
 
 </div>
 
 ---
 
-Helix is a **modular, capability-based operating system kernel** written entirely in Rust.
-It targets bare metal (`x86_64-unknown-none`) with zero reliance on the standard library —
-every crate is `#![no_std]`, every subsystem is a trait, and every implementation is a
-hot-swappable module.
+We are an open-source organization building the foundations of a new kind of operating system — one where **modularity is not an afterthought, but the architecture itself.**
 
-The kernel is not a monolith that happens to be extensible. It is an **extensible framework
-that happens to be a kernel.**
+Our work sits at the intersection of systems programming, language-driven safety, and adaptive computing. We believe that the next generation of operating systems should be able to observe their own behavior, replace their own components at runtime, and recover from failures without human intervention.
 
-### 🧬 What Makes Helix Different
+Everything we build is written in **Rust**, runs on **bare metal**, and compiles with **zero dependency on any existing OS or standard library**. We design frameworks first and implementations second — so that anyone can take the interfaces we define and build something entirely their own.
 
-<table>
-<tr>
-<td width="50%">
+### What We Care About
 
-**🔩 Mechanism, Not Policy**
+🔩 &ensp; **Separation of mechanism and policy** — the core should provide primitives, not opinions.
 
-The trusted computing base provides interrupt dispatch,
-capability validation, and context switching — nothing more.
-Scheduling policies, memory allocation strategies, and
-filesystem behavior all live in replaceable modules.
+🧬 &ensp; **Trait-driven architecture** — every boundary in the system is an interface that can be reimplemented.
 
-</td>
-<td width="50%">
+♻️ &ensp; **Live evolution** — software that can be updated, swapped, and healed while it runs.
 
-**♻️ Hot-Reload at Runtime**
+🛡️ &ensp; **Safety without compromise** — memory safety at the language level, fault isolation at the architecture level.
 
-Modules can be replaced while the kernel is running: state
-snapshot → atomic swap → ABI compatibility check → automatic
-rollback on failure. No reboot required.
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-**🛡️ Self-Healing by Default**
-
-A watchdog + health monitor + recovery manager pipeline
-detects crashed or hung modules, restarts them, and migrates
-state — without bringing down the system.
-
-</td>
-<td width="50%">
-
-**🧠 NEXUS Intelligence**
-
-A kernel-level observability engine with failure prediction,
-anomaly detection, causal graphs, and an evolution sandbox
-that lets the kernel learn from its own execution.
-
-</td>
-</tr>
-</table>
-
-### 📦 The Stack
-
-| Layer | Component | Description |
-|:------|:----------|:------------|
-| **Boot** | Limine · UEFI · Multiboot2 | Three bootloader frontends — pick the one your hardware needs |
-| **HAL** | Trait-driven abstraction | `Cpu`, `Mmu`, `InterruptController`, `Firmware` — implement four traits to port Helix |
-| **Core** | Orchestrator + Syscall + IPC | Policy-free TCB: lifecycle, capability broker, interrupt routing |
-| **Subsystems** | Memory · Execution · DIS · NEXUS · Init | Trait-based frameworks — plug in any conforming implementation |
-| **Modules** | Schedulers · Allocators · Drivers | Hot-swappable, ABI-versioned, fault-isolated |
-| **Filesystem** | HelixFS | CoW, B+tree indexing, journaling, encryption, snapshots |
-| **Graphics** | Lumina (21 crates) | `no_std` GPU API — shader compiler, render graph, PBR, ray tracing, SPIR-V codegen |
-
-### 🚀 Get Started
-
-```bash
-git clone https://github.com/HelixOS-Org/helix.git
-cd helix
-make run    # builds + boots in QEMU
-```
-
-### 🤝 Contributing
-
-We welcome contributions of all sizes — from typo fixes to new subsystems.
-Read our **[Contributing Guide](https://github.com/HelixOS-Org/helix/blob/main/CONTRIBUTING.md)**
-and our **[Code of Conduct](https://github.com/HelixOS-Org/helix/blob/main/CODE_OF_CONDUCT.md)**
-before opening your first PR.
+🌍 &ensp; **Openness** — MIT-licensed, community-driven, built in public.
 
 <div align="center">
 
-**[📖 Wiki](https://github.com/HelixOS-Org/helix/wiki)** · **[🐛 Issues](https://github.com/HelixOS-Org/helix/issues)** · **[💬 Discussions](https://github.com/HelixOS-Org/helix/discussions)** · **[🔒 Security](https://github.com/HelixOS-Org/helix/blob/main/SECURITY.md)**
+**[💬 Discussions](https://github.com/orgs/HelixOS-Org/discussions)** · **[🐛 Issues](https://github.com/HelixOS-Org/helix/issues)** · **[🤝 Contributing](https://github.com/HelixOS-Org/helix/blob/main/CONTRIBUTING.md)**
 
 </div>
