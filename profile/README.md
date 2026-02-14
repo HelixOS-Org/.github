@@ -1,12 +1,10 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HelixOS-Org/helix/main/assets/logo-banner.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HelixOS-Org/helix/main/assets/logo-banner.svg">
-  <img alt="HelixOS" src="https://raw.githubusercontent.com/HelixOS-Org/helix/main/assets/logo-banner.svg" width="560">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HelixOS-Org/.github/main/assets/org-banner.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HelixOS-Org/.github/main/assets/org-banner.svg">
+  <img alt="HelixOS — Systems Built to Evolve" src="https://raw.githubusercontent.com/HelixOS-Org/.github/main/assets/org-banner.svg" width="840">
 </picture>
-
-<br/>
 
 </div>
 
