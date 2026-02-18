@@ -3,7 +3,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HelixOS-Org/helix/main/assets/logo-banner.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HelixOS-Org/helix/main/assets/logo-banner.svg">
-  <img alt="Helix OS" src="https://raw.githubusercontent.com/HelixOS-Org/helix/main/assets/logo-banner.svg" width="560">
+  <img alt="Helix OS" src="https://raw.githubusercontent.com/HelixOS-Org/helix/main/assets/org-banner.svg" width="560">
 </picture>
 
 <br/>
